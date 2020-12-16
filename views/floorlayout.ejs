@@ -1,0 +1,393 @@
+<!-- ! Floor Layouts! -->
+<div id="id01" class="w3-modal" style="left:7%;padding-top:4%">
+ <div class="w3-modal-content w3-animate-opacity" style="width:550px; background-color: #7f7f7f" >
+  <header class="w3-container w3-black"> 
+   <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-black w3-large w3-display-topright">&times;</span>
+   <h2>Admission</h2>
+  </header>
+
+  <div class="w3-bar w3-border-bottom w3-black">
+   <button type="button" class="tablink w3-bar-item w3-button" onclick="openFloor(event, 'groundfloor')">Ground Floor</button>
+   <button type="button" class="tablink w3-bar-item w3-button" onclick="openFloor(event, 'firstfloor')">First Floor</button>
+   <button type="button" class="tablink w3-bar-item w3-button" onclick="openFloor(event, 'secondfloor')">Second Floor</button>
+  </div>
+
+  <div id="groundfloor" class="w3-container floors"  >
+    <div>
+	<img src="images/groundfloor.png"  class="groundfloor floorplan"/> 
+	<div class="groundfloor room1" id="bed1"><a href="#" class="fill-div" data="GF-04|A|bed1|bed2" onclick="openAdmission(this)" >A</a></div>
+    <div class="groundfloor room2" id="bed2"><a href="#" class="fill-div" data="GF-04|B|bed2|bed1" onclick="openAdmission(this)" >B</a></div>
+    <div class="groundfloor room3" id="bed3"><a href="#" class="fill-div" data="GF-05|A|bed3|bed4" onclick="openAdmission(this)" >A</a></div> 
+    <div class="groundfloor room4" id="bed4"><a href="#" class="fill-div" data="GF-05|B|bed4|bed3" onclick="openAdmission(this)" >B</a></div>
+    <div class="groundfloor room5" id="bed5"><a href="#" class="fill-div" data="GF-06|A|bed5|bed6" onclick="openAdmission(this)" >A</a></div>
+    <div class="groundfloor room6" id="bed6"><a href="#" class="fill-div" data="GF-06|B|bed6|bed5" onclick="openAdmission(this)" >B</a></div>
+	<div class="groundfloor room7" id="bed7"><a href="#" class="fill-div" data="GF-03|A|bed7|bed8" onclick="openAdmission(this)" >A</a></div>
+	<div class="groundfloor room8" id="bed8"><a href="#" class="fill-div" data="GF-03|B|bed8|bed7" onclick="openAdmission(this)" >B</a></div>
+	<div class="groundfloor room9" id="bed9"><a href="#" class="fill-div" data="GF-02|A|bed9|bed10"onclick="openAdmission(this)" >A</a></div>
+	<div class="groundfloor room10" id="bed10"><a href="#" class="fill-div" data="GF-02|B|bed10|bed9" onclick="openAdmission(this)" >B</a></div>
+	<div class="groundfloor room11" id="bed11"><a href="#" class="fill-div" data="GF-01|A|bed11|bed12"onclick="openAdmission(this)" >A</a></div>
+	<div class="groundfloor room12" id="bed12"><a href="#" class="fill-div" data ="GF-01|B|bed12|bed11" onclick="openAdmission(this)" >B</a></div>
+	</div> 
+ </div>
+
+  <div id="firstfloor" class="w3-container floors">
+   <div >
+		<img src="images/firstfloor.png" class="otherfloor floorplan"/>
+		<div class="otherfloor room1" id="bed13"><a href="#" class="fill-div"  data="FF-09|A|bed13|bed14" onclick="openAdmission(this)">A</a></div>
+		<div class="otherfloor room2"  id="bed14"><a href="#" class="fill-div" data="FF-09|B|bed14|bed13" onclick="openAdmission(this)" >B</a></div>
+		<div class="otherfloor room3"  id="bed15"><a href="#" class="fill-div" data="FF-10|A|bed15|bed16" onclick="openAdmission(this)" >A</a></div> 
+		<div class="otherfloor room4"  id="bed16"><a href="#" class="fill-div" data="FF-10|B|bed16|bed15" onclick="openAdmission(this)" >B</a></div>
+		<div class="otherfloor room5"  id="bed17"><a href="#" class="fill-div" data="FF-11|A|bed17|bed18" onclick="openAdmission(this)" >A</a></div>
+		<div class="otherfloor room6"  id="bed18"><a href="#" class="fill-div" data="FF-11|B|bed18|bed17" onclick="openAdmission(this)" >B</a></div>
+		<div class="otherfloor room7"  id="bed19"><a href="#" class="fill-div" data="FF-12|A|bed19|bed20" onclick="openAdmission(this)" >A</a></div>
+		<div class="otherfloor room8"  id="bed20"><a href="#" class="fill-div" data="FF-12|B|bed20|bed19" onclick="openAdmission(this)" >B</a></div>
+		<div class="otherfloor room9"  id="bed21"><a href="#" class="fill-div" data="FF-01|A|bed21|bed22" onclick="openAdmission(this)" >A</a></div>
+		<div class="otherfloor room10" id="bed22"><a href="#" class="fill-div" data="FF-01|B|bed22|bed21" onclick="openAdmission(this)" >B</a></div>
+		<div class="otherfloor room11" id="bed23"><a href="#" class="fill-div" data="FF-02|A|bed23|bed24" onclick="openAdmission(this)" >A</a></div>
+		<div class="otherfloor room12" id="bed24"><a href="#" class="fill-div" data="FF-02|B|bed24|bed23" onclick="openAdmission(this)" >B</a></div>
+		<div class="otherfloor room13" id="bed25"><a href="#" class="fill-div" data="FF-03|A|bed25|bed26" onclick="openAdmission(this)" >A</a></div>
+		<div class="otherfloor room14" id="bed26"><a href="#" class="fill-div" data="FF-03|B|bed26|bed25" onclick="openAdmission(this)" >B</a></div>
+		<div class="otherfloor room15" id="bed27"><a href="#" class="fill-div" data="FF-04|A|bed27|bed28" onclick="openAdmission(this)" >A</a></div>
+		<div class="otherfloor room16" id="bed28"><a href="#" class="fill-div" data="FF-04|B|bed28|bed27" onclick="openAdmission(this)" >B</a></div>
+		
+		<div class="otherfloor room17" id="bed29"><a href="#" class="fill-div" data="FF-05|A|bed29|bed30|bed31" onclick="openAdmission(this)" >A</a></div>
+		<div class="otherfloor room18" id="bed30"><a href="#" class="fill-div" data="FF-05|B|bed30|bed29|bed31" onclick="openAdmission(this)" >B</a></div>
+		<div class="otherfloor room19" id="bed31"><a href="#" class="fill-div" data="FF-05|C|bed31|bed30|bed29" onclick="openAdmission(this)" >C</a></div>
+		
+		<div class="otherfloor room20" id="bed32"><a href="#" class="fill-div" data="FF-06|A|bed32|bed33|bed34" onclick="openAdmission(this)" >A</a></div>
+		<div class="otherfloor room21" id="bed33"><a href="#" class="fill-div" data="FF-06|B|bed33|bed32|bed34" onclick="openAdmission(this)" >B</a></div>
+		<div class="otherfloor room22" id="bed34"><a href="#" class="fill-div" data="FF-06|C|bed34|bed33|bed32" onclick="openAdmission(this)" >C</a></div>
+		
+		<div class="otherfloor room23" id="bed35"><a href="#" class="fill-div" data="FF-07|A|bed35|bed36|bed37" onclick="openAdmission(this)" >A</a></div>
+		<div class="otherfloor room24" id="bed36"><a href="#" class="fill-div" data="FF-07|B|bed36|bed35|bed37" onclick="openAdmission(this)" >B</a></div>
+		<div class="otherfloor room25" id="bed37"><a href="#" class="fill-div" data="FF-07|C|bed37|bed36|bed35" onclick="openAdmission(this)" >C</a></div>
+		
+		<div class="otherfloor room26" id="bed38"><a href="#" class="fill-div" data="FF-08|A|bed38|bed39|bed40" onclick="openAdmission(this)" >A</a></div>
+		<div class="otherfloor room27" id="bed39"><a href="#" class="fill-div" data="FF-08|B|bed39|bed38|bed40" onclick="openAdmission(this)" >B</a></div>
+		<div class="otherfloor room28" id="bed40"><a href="#" class="fill-div" data="FF-08|C|bed40|bed39|bed38" onclick="openAdmission(this)" >C</a></div>		
+	</div>
+  </div>
+
+  <div id="secondfloor" class="w3-container floors">
+  <div >
+		<img src="images/secondfloor.png" class="otherfloor floorplan"/>
+		<div class="otherfloor room1"  id="bed41"><a href="#" class="fill-div" data="SF-09|A|bed41|bed42" onclick="openAdmission(this)">A</a></div>
+		<div class="otherfloor room2"  id="bed42"><a href="#" class="fill-div" data="SF-09|B|bed42|bed41" onclick="openAdmission(this)" >B</a></div>
+		<div class="otherfloor room3"  id="bed43"><a href="#" class="fill-div" data="SF-10|A|bed43|bed44" onclick="openAdmission(this)" >A</a></div> 
+		<div class="otherfloor room4"  id="bed44"><a href="#" class="fill-div" data="SF-10|B|bed44|bed43" onclick="openAdmission(this)" >B</a></div>
+		<div class="otherfloor room5"  id="bed45"><a href="#" class="fill-div" data="SF-11|A|bed45|bed46" onclick="openAdmission(this)" >A</a></div>
+		<div class="otherfloor room6"  id="bed46"><a href="#" class="fill-div" data="SF-11|B|bed46|bed45" onclick="openAdmission(this)" >B</a></div>
+		<div class="otherfloor room7"  id="bed47"><a href="#" class="fill-div" data="SF-12|A|bed47|bed48" onclick="openAdmission(this)" >A</a></div>
+		<div class="otherfloor room8"  id="bed48"><a href="#" class="fill-div" data="SF-12|B|bed48|bed47" onclick="openAdmission(this)" >B</a></div>
+		<div class="otherfloor room9"  id="bed49"><a href="#" class="fill-div" data="SF-01|A|bed49|bed50" onclick="openAdmission(this)" >A</a></div>
+		<div class="otherfloor room10" id="bed50"><a href="#" class="fill-div" data="SF-01|B|bed50|bed49" onclick="openAdmission(this)" >B</a></div>
+		<div class="otherfloor room11" id="bed51"><a href="#" class="fill-div" data="SF-02|A|bed51|bed52" onclick="openAdmission(this)" >A</a></div>
+		<div class="otherfloor room12" id="bed52"><a href="#" class="fill-div" data="SF-02|B|bed52|bed51" onclick="openAdmission(this)" >B</a></div>
+		<div class="otherfloor room13" id="bed53"><a href="#" class="fill-div" data="SF-03|A|bed53|bed54" onclick="openAdmission(this)" >A</a></div>
+		<div class="otherfloor room14" id="bed54"><a href="#" class="fill-div" data="SF-03|B|bed54|bed53" onclick="openAdmission(this)" >B</a></div>
+		<div class="otherfloor room15" id="bed55"><a href="#" class="fill-div" data="SF-04|A|bed55|bed56" onclick="openAdmission(this)" >A</a></div>
+		<div class="otherfloor room16" id="bed56"><a href="#" class="fill-div" data="SF-04|B|bed56|bed55" onclick="openAdmission(this)" >B</a></div>
+		
+		<div class="otherfloor room17" id="bed57"><a href="#" class="fill-div" data="SF-05|A|bed57|bed58|bed59" onclick="openAdmission(this)" >A</a></div>
+		<div class="otherfloor room18" id="bed58"><a href="#" class="fill-div" data="SF-05|B|bed58|bed57|bed59" onclick="openAdmission(this)" >B</a></div>
+		<div class="otherfloor room19" id="bed59"><a href="#" class="fill-div" data="SF-05|C|bed59|bed58|bed57" onclick="openAdmission(this)" >C</a></div>
+		
+		<div class="otherfloor room20" id="bed60"><a href="#" class="fill-div" data="SF-06|A|bed60|bed61|bed62" onclick="openAdmission(this)" >A</a></div>
+		<div class="otherfloor room21" id="bed61"><a href="#" class="fill-div" data="SF-06|B|bed61|bed60|bed62" onclick="openAdmission(this)" >B</a></div>
+		<div class="otherfloor room22" id="bed62"><a href="#" class="fill-div" data="SF-06|C|bed62|bed61|bed60" onclick="openAdmission(this)" >C</a></div>
+		
+		<div class="otherfloor room23" id="bed63"><a href="#" class="fill-div" data="SF-07|A|bed63|bed64|bed65" onclick="openAdmission(this)" >A</a></div>
+		<div class="otherfloor room24" id="bed64"><a href="#" class="fill-div" data="SF-07|B|bed64|bed63|bed65" onclick="openAdmission(this)" >B</a></div>
+		<div class="otherfloor room25" id="bed65"><a href="#" class="fill-div" data="SF-07|C|bed65|bed64|bed63" onclick="openAdmission(this)" >C</a></div>
+		
+		<div class="otherfloor room26" id="bed66"><a href="#" class="fill-div" data="SF-08|A|bed66|bed67|bed68" onclick="openAdmission(this)" >A</a></div>
+		<div class="otherfloor room27" id="bed67"><a href="#" class="fill-div" data="SF-08|B|bed67|bed66|bed68" onclick="openAdmission(this)" >B</a></div>
+		<div class="otherfloor room28" id="bed68"><a href="#" class="fill-div" data="SF-08|C|bed68|bed67|bed66" onclick="openAdmission(this)" >C</a></div>	
+		
+	</div>
+  </div>
+
+ </div>
+</div>
+<!-- !Floor Layouts! -->
+<!-- !Admission Modal! -->
+<div id="id02" class="modal"style="left:7%;padding-top:3%">
+    <div class="w3-modal-content w3-card-4 w3-animate-opacity w3-black" style="max-width:450px">
+
+      <div class="w3-center"><br>
+        <span onclick="document.getElementById('id02').style.display='none'" class="w3-button w3-xlarge w3-hover-red w3-display-topright" title="Close Modal">&times;</span>
+      </div>
+      <form  class="w3-container"   id ="formhome">
+			<h2 class="w3-center">Patient Details</h2>
+				<div class="w3-row w3-section">
+					<div class="w3-rest">
+					 <label>Hosptial ID</label>
+					  <input class="w3-input w3-border"  style="width:50%" name="hospitalID" id="hospitalID"type="text" placeholder="Hosptial ID"maxlength = "10" autocomplete="off" required>
+					</div>
+				</div>
+					<div class="w3-row" >
+						<div class="w3-half" >
+						 <label>Full Name</label>
+						  <input class="w3-input w3-border" style="width:98%" name="name" id="name"type="text" placeholder="Full Name" maxlength = "50" autocomplete="off"required>
+						</div>
+						<div class="w3-half">
+						<label>Phone Number</label>
+						<input class="w3-input w3-border" style="width:98%" name="phoneNumber"  id="phoneNumber" type="text" pattern="\d*" placeholder="Phone Number" maxlength = "10" autocomplete="off" required>
+						</div>
+					</div>
+				<div class="w3-row w3-section">
+					<div class="w3-row" >
+						<div class="w3-half" >
+						 <label>Room Number</label>
+						  <input readOnly class="w3-input w3-border" style="width:98%" name="roomNumber" id="roomNumber"type="text" placeholder="Room Number" maxlength = "50" autocomplete="off"required>
+						</div>
+						<div class="w3-half">
+						<label>Bed</label>
+						<select class="w3-select" name="option" name="bedNumber"  id="bedNumber" required>
+						  <option value="" disabled selected>Choose your option</option>
+						</select>
+						</div>
+					</div>
+				</div>
+				<div class="w3-row w3-section">
+					<div class="w3-rest">
+					<label>Discharge Date</label>
+					  <input class="w3-input w3-border" style="width:50%" name="checkoutDate" id="checkoutDate" type="text" placeholder="Discharge Date" autocomplete="off"required>
+					</div>
+				</div>
+				
+				 <div class="w3-container w3-border-top w3-padding-16 w3-black">
+					<button onclick="document.getElementById('id02').style.display='none';" type="button" class="w3-button w3-blue">Cancel</button>
+					<button  class="w3-button w3-blue" type="submit" name="submit">Save</button>
+	   			    <div  style="float:right;">
+					<label style="color:#ff9800;padding:5px;display: none"  id="messages" ></label>  </div>
+				</div>
+				<input type="hidden"  id="bedCount"> </input>
+      </form>
+    </div>
+  </div>
+<script>
+//Open Admission Popup
+var modflag;
+function openAdmission(divctrl)
+{	
+	var roomNumber = $(divctrl).attr('data').split('|')[0];
+	var bedNumber =$(divctrl).attr('data').split('|')[1];
+	
+	var bedTag =$(divctrl).attr('data').split('|')[2];
+	var bedTag1 = $(divctrl).attr('data').split('|')[3];
+	var bedTag2 ='';
+	
+	if (typeof $(divctrl).attr('data').split('|')[4] !== 'undefined')
+	 {
+		 bedTag2 =  $(divctrl).attr('data').split('|')[4];
+	 }
+	console.log("bedTag - " + bedTag +  ", bedTag1 - " + bedTag1 + ", bedTag2 - " + bedTag2);
+	document.getElementById("roomNumber").value =roomNumber;
+	document.getElementById("bedNumber").value =bedNumber;
+
+	var options = [];
+	$('#bedNumber').empty();
+	selectValues='';
+	modflag = 1;
+	$("#messages").empty();
+	if (typeof $(divctrl).attr('data').split('|')[4] !== 'undefined')
+	 {
+		selectValues = [
+		
+						[bedTag2,'A'],
+						[bedTag1,'B'],
+						[bedTag,'C'],
+						[bedTag2 +'|' +bedTag1+'|' +bedTag,'Room']
+					];
+	 }
+	 else
+	 {
+		selectValues = [
+					[bedTag,'A'],
+					[bedTag1,'B'],
+					[bedTag +'|' +bedTag1,'Room']
+				];
+	 }
+	
+				
+			var i;
+			var j;
+				for (i = 0; i < dataArray.length; i++) 
+				{
+				
+					if( roomNumber == dataArray[i]['roomNumber'].trim())
+					{
+						
+						document.getElementById("hospitalID").value =dataArray[i]['hospitalID'] ;
+						document.getElementById("name").value = dataArray[i]['name'].trim();
+						document.getElementById("phoneNumber").value = dataArray[i]['phoneNumber'] ;
+						document.getElementById("checkoutDate").value = dataArray[i]['checkoutDate'] ;
+
+						if(dataArray[i]['bedTag'].trim()==bedTag)
+						{
+							modflag = 0;
+							console.log(" Bed Tag matched");		
+							$("#hospitalID").attr("disabled", "disabled")
+							$("#hospitalID").css('color', 'white');							
+							$('#bedNumber').empty();
+								selectValues='';
+								selectValues = [[bedTag,bedNumber]];
+							break;
+						}
+						else if(dataArray[i]['bedTag'].indexOf("|") >0)		
+						{
+							//full room
+							modflag = 0;
+							console.log(" Full Room");
+							$("#hospitalID").attr("disabled", "disabled")
+							$("#hospitalID").css('color', 'white');	
+							$('#bedNumber').empty();
+								selectValues='';
+								selectValues = [[bedTag +'|' +bedTag1,'Room']];
+							break;
+						}
+						else if(dataArray[i]['bedTag'].trim() !=bedTag)
+						{
+								console.log(" First Elseif");
+								document.getElementById("hospitalID").value = '' ;
+								document.getElementById("name").value = '';
+								document.getElementById("phoneNumber").value = '' ;
+								document.getElementById("checkoutDate").value = '';
+								$('#bedNumber').empty();
+								
+								selectValues='';
+								selectValues = 	[[bedTag,bedNumber]];		
+								//break;
+						}
+					}
+					else
+						{
+								console.log("  Else");
+								modflag = 1;
+								$( "#hospitalID" ).prop( "disabled", false );
+								document.getElementById("hospitalID").value = '' ;
+								document.getElementById("name").value = '';
+								document.getElementById("phoneNumber").value = '' ;
+								document.getElementById("checkoutDate").value = '';
+								selectValues='';
+								$('#bedNumber').empty();
+								if (bedTag2 =='')
+								{
+									selectValues = [
+														[bedTag,'A'],
+														[bedTag1,'B'],
+														[bedTag +'|' +bedTag1,'Room']
+													];
+								}
+								else if(bedTag2!='')
+								{
+									selectValues = [
+														[bedTag,'A'],
+														[bedTag1,'B'],
+														[bedTag2,'C'],
+														[bedTag +'|' +bedTag1 + '|'+bedTag2,'Room']
+												];
+								}
+							
+						}	
+				};
+				console.log(selectValues);
+					$.each(selectValues, function(key, values) {
+						value =values[1];
+						key  = values[0];
+						
+						if(value==bedNumber)
+							{
+								$('#bedNumber').append($('<option>', { value : key }).text(value).attr('selected','selected'))
+							}
+						else
+							{
+								$('#bedNumber').append($('<option>', { value : key }).text(value))
+							};
+						
+					});		
+	document.getElementById('id02').style.display='block';
+};
+ 
+//Submit Jquery
+$("#formhome").submit(function(event){
+ event.preventDefault();
+ var e = document.getElementById("bedNumber");
+ var strbedNumber = e.options[e.selectedIndex].text;
+ var bedCount = 1;
+ bedCount =$('#bedNumber').val().split("|").length;
+ var date = $("#checkoutDate") .val();
+ date = date.split("/")[1] + '/' + date.split("/")[0]  + '/' + date.split("/")[2] ;
+console.log(JSON.stringify({
+											"hospitalID": $("#hospitalID") .val(),
+											"name": $("#name") .val(),
+											"phoneNumber": $("#phoneNumber") .val(),
+											"checkoutDate": date,
+											"roomNumber": $("#roomNumber") .val(),
+											"bedNumber": strbedNumber,
+											"bedTag": $('#bedNumber').val(),
+											"bedCount":bedCount,
+											"modflag" : modflag
+										})		);
+ url = window.location.origin ;
+	$.ajax(
+				{
+					url: window.location.origin +'/home/savedata', 
+					type: 'POST', 
+					contentType: 'application/json', 
+					data: JSON.stringify({
+											"hospitalID": $("#hospitalID") .val(),
+											"name": $("#name") .val(),
+											"phoneNumber": $("#phoneNumber") .val(),
+											"checkoutDate": date,
+											"roomNumber": $("#roomNumber") .val(),
+											"bedNumber": strbedNumber,
+											"bedTag": $('#bedNumber').val(),
+											"bedCount":bedCount,
+											"modflag" : modflag
+										})		
+				
+				}
+			).done(function (response) {
+				$("#messages").show();
+				$("#messages").html(response.message);
+				if(response.success=='true')
+				{
+					//alert("hello");	
+						console.log(url+= "?openmodal=1");
+					   location.replace(url+= "/home#window");
+				};
+			})
+			.fail( function(xhr, textStatus, errorThrown) {
+			alert(xhr.responseText);
+			});
+	});
+//Date
+ $(document).ready(function(){
+      var date_input=$('input[name="checkoutDate"]'); //our date input has the name "date"
+      var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
+      var options={
+        format: 'dd/mm/yyyy',
+        container: container,
+        todayHighlight: true,
+        autoclose: true,
+		startDate:new Date(),
+      };
+      date_input.datepicker(options);
+    })
+//Open Floor
+function openFloor(evt, FloorName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("floors");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+    tablinks[i].classList.remove("w3-light-grey");
+  }
+  document.getElementById(FloorName).style.display = "block";
+  evt.currentTarget.classList.add("w3-light-grey");
+}
+</script>

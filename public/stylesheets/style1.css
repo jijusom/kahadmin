@@ -1,0 +1,574 @@
+div {
+    position: relative;
+	
+}
+body, html {
+  height: 85%;
+  margin: 0;
+  
+}
+a.fill-div {
+    display: block;
+    height: 100%;
+    width: 100%;
+	 color: #FFFFFF; 
+    text-decoration: none;
+}
+.landingpage.frontviewpic
+{
+	padding-top: 45px;
+	max-width:100%;
+	height:auto; 
+	width:100%
+
+}
+.landingpage.groundfloor
+{
+	position: absolute;
+	display: inline:block;
+    width: 100%;
+    height: 20%;
+    left: 8%;
+    top: 65%;
+	max-width:87%;
+}
+.landingpage.groundfloor:hover
+{
+	border-style: solid;
+	border-color: black;
+}
+.landingpage.firstfloor
+{
+	position: absolute;
+	display: inline:block;
+    width: 100%;
+    height: 20%;
+    left: 8%;
+    top: 40%;
+	max-width:87%;
+}
+.landingpage.firstfloor:hover
+{
+	border-style: solid;
+	border-color: coral;
+}
+.landingpage.secondfloor
+{
+	position: absolute;
+	display: inline:block;
+    width: 100%;
+     height: 20%;
+    left: 8%;
+    top: 20%;
+	max-width:9%;
+}
+.landingpage.secondfloor:hover
+{
+	border-style: solid;
+	border-color: coral;
+	
+}
+groundfloor{  
+	
+}
+.groundfloor {
+	
+  color: white;
+  font-size: 0.8vw;
+  text-align: center;
+  vertical-align: middle;	
+  display: block;
+  
+}
+.groundfloor.floorplan {
+	
+	padding-top:1%;
+	max-width:99%;
+	display: block;
+
+}
+.groundfloor.room1 {
+	position: absolute;
+	display: block;
+    width: 2.8%;
+    height: 5.7%;
+    left: 6%;
+    top: 53.9%;
+	max-width:87%;
+    background-color: green;
+	opacity: 0.5;
+}
+.groundfloor.room2 {
+	position: absolute;
+	display: block;
+	width: 2.8%;
+    height: 5.7%;
+    left: 15%;
+    top: 53.9%;
+    background-color: green;
+	opacity: 0.5;
+}
+
+.groundfloor.room3 {
+	position: absolute;
+	display: block;
+	width: 2.8%;
+    height: 5.7%;
+    left: 6%;
+    top: 33.8%;
+    background-color: green;
+	opacity: 0.5;
+}
+.groundfloor.room4 {
+	position: absolute;
+	display: block;
+	width: 2.8%;
+    height: 5.7%;
+    left: 15%;
+    top: 33.8%;
+    background-color: green;
+	opacity: 0.5;
+}
+.groundfloor.room5 {
+	position: absolute;
+	display: block;
+	width: 2.8%;
+    height: 5.8%;
+    left: 6%;
+    top: 20.4%;
+    background-color: green;
+	opacity: 0.5;
+}
+.groundfloor.room6 {
+	position: absolute;
+	display: block;
+	width: 2.8%;
+    height: 5.8%;
+    left: 15%;
+    top: 20.4%;
+    background-color: green;
+	opacity: 0.5;
+}
+.groundfloor.room7 {
+	position: absolute;
+	display: block;
+	width: 2.8%;
+    height: 5.8%;
+    left: 71.7%;
+   top: 20.6%;
+    background-color: green;
+	opacity: 0.5;
+}
+.groundfloor.room8 {
+	position: absolute;
+	display: block;
+	width: 2.8%;
+    height: 6%;
+    left: 80.6%;
+    top: 20.4%;
+    background-color: green;
+	opacity: 0.5;
+}
+.groundfloor.room9{
+	position: absolute;
+	display: block;
+	width: 2.8%;
+	height: 5.8%;
+    left: 71.7%;
+    top: 34%;
+    background-color: green;
+	opacity: 0.5;
+}
+.groundfloor.room10 {
+	position: absolute;
+	display: block;
+	width: 2.8%;
+	height: 6%;
+	left: 80.6%;
+    top: 33.8%;
+    background-color: green;
+	opacity: 0.5;
+}
+.groundfloor.room11{
+	position: absolute;
+	display: block;
+	width: 2.8%;
+	height: 6%;
+    left: 71.7%;
+    top: 53.9%;
+    background-color: green;
+	opacity: 0.5;
+}
+.groundfloor.room12 {
+	position: absolute;
+	display: block;
+	width: 2.8%;
+	height: 6%;
+    left: 80.6%;
+	top: 53.9%;
+    background-color: green;
+	opacity: 0.5;
+}
+
+otherfloor{  
+	
+}
+.otherfloor {
+	
+  color: white;
+  font-size: 0.8vw;
+  text-align: center;
+  vertical-align: middle;	
+  display: block;
+  
+}
+.otherfloor.floorplan {
+	
+	padding-top:1%;
+	max-width:100%;
+	height:auto; 
+	width:100%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+.otherfloor.room1 {
+	position:absolute;
+	width: 2.8%;
+    height: 5.5%;
+    left: 6.4%;
+    top: 66.5%;
+    background-color: green;
+	opacity: 0.5;
+}
+.otherfloor.room2 {
+	position:absolute;
+	width: 2.8%;
+    height: 5.7%;
+    left: 15.6%;
+    top: 66.5%;
+    background-color: green;
+	opacity: 0.5;
+}
+
+.otherfloor.room3 {
+	position:absolute;
+	width: 2.8%;
+    height: 5.2%;
+    left: 6.4%;
+    top: 53.3%;
+    background-color: green;
+	opacity: 0.5;
+}
+.otherfloor.room4 {
+	position:absolute;
+	width: 2.8%;
+    height: 5.7%;
+    left: 15.6%;
+    top: 53.3%;
+    background-color: green;
+	opacity: 0.5;
+}
+.otherfloor.room5 {
+	position:absolute;
+	width: 2.8%;
+    height: 5.5%;
+    left: 6.4%;
+    top: 32.7%;
+    background-color: green;
+	opacity: 0.5;
+}
+.otherfloor.room6 {
+	position:absolute;
+	width: 2.8%;
+    height: 5.7%;
+	left: 15.6%;
+    top: 32.7%;
+    background-color: green;
+	opacity: 0.5;
+}
+.otherfloor.room7 {
+	position:absolute;
+	width: 2.8%;
+    height: 5.3%;
+    left: 6.4%;
+    top: 20.1%;
+    background-color: green;
+	opacity: 0.5;
+}
+.otherfloor.room8 {
+	position:absolute;
+	width: 2.8%;
+    height: 5.3%;
+    left: 15.6%;
+    top: 20.1%;
+    background-color: green;
+	opacity: 0.5;
+}
+.otherfloor.room9{
+	position:absolute;
+	width: 2.8%;
+	height: 5.1%;
+    left: 71.8%;
+	top: 20%;
+    background-color: green;
+	opacity: 0.5;
+}
+.otherfloor.room10 {
+	position:absolute;
+	width: 2.8%;
+    height: 5.1%;
+	left: 80.6%;
+    top: 20%;
+    background-color: green;
+	opacity: 0.5;
+}
+.otherfloor.room11{
+	position:absolute;
+	width: 2.8%;
+	height: 5.1%;
+    left: 71.8%;
+    top:  33%;
+    background-color: green;
+	opacity: 0.5;
+}
+.otherfloor.room12 {
+	position:absolute;
+	width: 2.8%;
+    height: 5.1%;
+	left: 80.6%;
+    top:  33%;
+    background-color: green;
+	opacity: 0.5;
+
+}
+.otherfloor.room13{
+	position:absolute;
+	width: 2.8%;
+	height: 5.1%;
+    left: 71.8%;
+    top: 53.4%;
+    background-color: green;
+	opacity: 0.5;
+}
+.otherfloor.room14 {
+	position:absolute;
+	width: 2.8%;
+    height: 5.1%;
+	left: 80.6%;
+    top: 53.4%;
+    background-color: green;
+	opacity: 0.5;
+}
+.otherfloor.room15{
+	position:absolute;
+    width: 5.2%;
+    height: 2.4%;
+    left: 78.3%;
+    top: 64.1%;
+    background-color: green;
+	opacity: 0.5;
+}
+.otherfloor.room16 {
+	position:absolute;
+    width: 5.2%;
+    height: 2.4%;
+    left:78.3%;
+    top: 69.2%;
+    background-color: green;
+	opacity: 0.5;
+}
+.otherfloor.room17{
+	position:absolute;
+	width: 5.2%;
+    height: 2.4%;
+    left: 52.3%;
+    top: 77%;
+    background-color: green;
+	opacity: 0.5;
+}
+.otherfloor.room18 {
+	position:absolute;
+	width: 5.2%;
+	height: 2.4%;
+	left: 52.3%;
+    top: 71.5%;
+    background-color: green;
+	opacity: 0.5;
+}
+.otherfloor.room19{
+	position:absolute;
+	width: 2.8%;
+	height: 5.1%;
+	left: 62.6%;
+    top: 67.3%;
+    background-color: green;
+	opacity: 0.5;
+}
+.otherfloor.room20 {
+	position:absolute;
+	width: 2.8%;
+	height: 5.1%;
+	left: 62.4%;
+    top: 61.3%;
+    background-color: green;
+	opacity: 0.5;
+}
+.otherfloor.room21{
+	position:absolute;
+	width: 5.2%;
+	height: 2.4%;
+	left: 52.3%;
+    top: 59.5%;
+    background-color: green;
+	opacity: 0.5;
+}
+.otherfloor.room22 {
+	position:absolute;
+	width: 5.2%;
+	height: 2.4%;
+	left: 52.3%;
+    top: 53.7%;
+    background-color: green;
+	opacity: 0.5;
+}
+.otherfloor.room23{
+	position:absolute;
+	width: 5.2%;
+	height: 2.4%;
+    left: 32.7%;
+    top: 53.7%;
+    background-color: green;
+	opacity: 0.5;
+}
+.otherfloor.room24 {
+	position:absolute;
+	width: 5.2%;
+	height: 2.4%;
+    left: 32.7%;
+    top: 59.5%;
+    background-color: green;
+	opacity: 0.5;
+}
+.otherfloor.room25{
+	position:absolute;
+	width: 2.8%;
+	height: 5.1%;
+	left: 24.6%;
+    top: 61.1%;
+    background-color: green;
+	opacity: 0.5;
+}
+.otherfloor.room26 {
+	position:absolute;
+	width: 2.8%;
+	height: 5.1%;
+    left: 24.6%;
+    top: 67.3%;
+    background-color: green;
+	opacity: 0.5;
+}
+.otherfloor.room27 {
+	position:absolute;
+	width: 5.2%;
+	height: 2.4%;
+	left: 32.7%;
+    top: 71.5%;
+    background-color: green;
+	opacity: 0.5;
+}
+
+.otherfloor.room28 {
+	position:absolute;
+	width: 5.2%;
+	height: 2.4%;
+	left: 32.7%;
+    top: 77.4%;
+    background-color: green;
+	opacity: 0.5;
+}
+
+
+  /*--
+Author: W3layouts
+Author URL: http://w3layouts.com
+--*/
+  :root {
+      --theme-color: #1F2323;
+      --title-color: #051b35;
+      --text-color: #333333;
+  }
+
+  /* reset code */
+  html {
+      scroll-behavior: smooth;
+  }
+
+  body,
+  html {
+      margin: 0;
+      padding: 0;
+      color: #585858;
+  }
+
+  * {
+      box-sizing: border-box;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  }
+
+  .wrapper {
+      width: 100%;
+      padding-right: 15px;
+      padding-left: 15px;
+      margin-right: auto;
+      margin-left: auto;
+  }
+
+  @media (min-width: 576px) {
+      .wrapper {
+          max-width: 540px;
+      }
+  }
+
+  @media (min-width: 768px) {
+      .wrapper {
+          max-width: 720px;
+      }
+  }
+
+  @media (min-width: 992px) {
+      .wrapper {
+          max-width: 960px;
+      }
+  }
+
+  @media (min-width: 1200px) {
+      .wrapper {
+          max-width: 1140px;
+      }
+  }
+
+  .d-grid {
+      display: grid;
+  }
+
+  .d-flex {
+      display: flex;
+      display: -webkit-flex;
+      flex-wrap: wrap;
+  }
+
+  .text-center {
+      text-align: center;
+  }
+
+  .text-left {
+      text-align: left;
+  }
+
+  .text-right {
+      text-align: right;
+  }
+
+  /*--//responsive--*/
+ 

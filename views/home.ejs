@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<%- include ("./partials/header") -%>
+	
+</head>
+
+<style>
+html,body,h1,h2,h3,h4,h5 {font-family: "Calibri", sans-serif}
+</style>
+<body class="w3-black" style ="width: 100%; height: 96%;" >
+
+<!-- Top container -->
+<div class="w3-bar w3-top w3-black w3-large" style="z-index:3;height:9%;width:100%;">
+  <button type="button"class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey" onclick="w3_open();"><i class="fa fa-bars"></i>  Menu</button>
+  <span class="w3-bar-item w3-right"><img src="/images/logo.jpg" class="w3-circle w3-margin-right" style="width:50px"></span>
+</div>
+<hr>
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-collapse w3-black w3-animate-left" style="z-index:4;width:300px;" id="mySidebar"><br>
+
+  <div class="w3-container w3-row">
+    <div class="w3-col">
+      <img src="/images/avatar2.png" class="w3-circle w3-margin-right" style="width:48px"> Welcome, <strong> 
+	  
+		<%= name %> </strong>
+    </div>
+  </div>
+  <hr>
+  
+  <div class="w3-container ">
+    <h5>Dashboard</h5>
+  </div>
+  <div class="w3-bar-block">
+     <a href="#" onclick="open_home()" class="w3-bar-item w3-button w3-padding w3-blue"><i class="fa fa-home fa-fw"></i>  Home </a>
+    <a href="#"  onclick="open_modal()" class="w3-bar-item w3-button w3-padding">
+	<i class="fa fa-user-plus fa-fw" ></i>  Admission</a>
+	<a href="#"  onclick="open_bedChange()" class="w3-bar-item w3-button w3-padding">
+	<i class="fa fa-bed fa-fw" ></i>  Bed Change</a>
+	<a href="#" onclick="open_settings()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-cog fa-fw"></i>  Admin</a>
+	<a href="../users/logout" class="w3-bar-item w3-button w3-padding"><i class="fa fa-sign-out fa-fw"></i>  Logout</a>
+	<a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hide-large" onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Close Menu</a>
+  </div>
+</nav>
+
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:300px;margin-top:43px;">
+
+  <div class="w3-row-padding w3-margin-bottom" style="padding-top:1px">
+    <div class="w3-quarter">
+      <div class="w3-container w3-green w3-padding-16">
+        <div class="w3-left"><i class="fa fa-user-plus w3-xxxlarge"></i></div>
+        <div class="w3-right">
+          <h3 id="admissionCount"></h3>
+        </div>
+        <div class="w3-clear"></div>
+        <h4>Admissions </h4>
+      </div>
+    </div>
+    <div class="w3-quarter">
+      <div class="w3-container w3-blue w3-padding-16">
+        <div class="w3-left"><i class="fa fa-bed w3-xxxlarge"></i></div>
+        <div class="w3-right">
+          <h3 id="availableBeds"></h3>
+        </div>
+        <div class="w3-clear"></div>
+        <h4>Available Beds</h4>
+      </div>
+    </div>
+    <div class="w3-quarter">
+      <div class="w3-container w3-teal w3-padding-16">
+        <div class="w3-left"><i class="fa fa-check-circle w3-xxxlarge"></i></div> 
+        <div class="w3-right">
+          <h3 id="dischargeToday"></h3>
+        </div>
+        <div class="w3-clear"></div>
+        <h4 >Discharges Today</h4>
+      </div>
+    </div>
+    <div class="w3-quarter">
+      <div class="w3-container w3-orange w3-text-white w3-padding-16">
+        <div class="w3-left"><i class="fa fa-users w3-xxxlarge"></i></div>
+        <div class="w3-right">
+          <h3>50</h3>
+        </div>
+        <div class="w3-clear"></div>
+        <h4>Occupancy Till date</h4>
+      </div>
+    </div>
+  </div>
+
+<div id ="idTbl" >
+ <h5>Patient List</h5>
+    <table class="w3-table  w3-bordered w3-border w3-hoverable w3-black">
+		<th> #</th>
+		<th> Hosptial ID</th>
+	   <th> Room</th>
+	   <th> Bed</th>
+	   <th> Name</th>
+	   <th> Contact Details</th>
+	   <th> Exp Discharge Date</th>
+
+		
+        <%
+        if(data.length!=0){
+        var i=1;
+        data.forEach(function(data){
+        %>
+        <tr>
+            <td><%=i; %></td>
+			<td><%=data.hospitalID %></td>
+            <td><%=data.roomNumber %></td>
+            <%if(data.bedNumber.indexOf("|") >0 )
+				{%>
+					<td> Room
+				<%}	
+				else
+				{%>
+					<td> <%=data.bedNumber %>
+				<%}
+			%></td>
+            <td><%=data.name %></td>
+            <td><%=data.phoneNumber %></td>
+			<td><%=data.checkoutDate %></td>
+        </tr>
+       <%  i++; }) %>
+        <% } else{ %>
+            <tr>
+                <td colspan="7">No Data Found</td>
+            </tr>
+        <% } %>
+    </table>
+    <button class="w3-button w3-dark-black">More <i class="fa fa-arrow-right"></i></button>
+</div>
+  <div id ="idMain" class="w3-container">
+   
+  </div>	
+</div>
+<script>
+var dataArray =  <%- JSON.stringify(data) %>  
+</script>
+<%- include ("./register") -%>
+	<%- include ("./floorlayout") -%>
+	<%- include ("./changeRoom") -%>
+<script>
+
+	
+//Assignin aary
+
+
+//document.getElementById('idLoginTbl').style.display='none';
+//document.getElementById('idAddUser').style.display='none';
+document.getElementById('id03').style.display='none';
+
+
+function open_home()
+{
+		 document.getElementById('idMain').innerHTML = document.getElementById('idTbl').innerHTML;
+		 document.getElementById('idAddUser').style.display='none';
+}
+
+
+// Header Data
+document.getElementById("admissionCount").innerHTML = dataArray.length;
+var dischargeToday = 0;
+var availableBeds = 0;
+var today = new Date();
+var dd = String(today.getDate()).padStart(2, '0');
+var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+var yyyy = today.getFullYear();
+today = dd + '/' + mm + '/' + yyyy;
+	for (i = 0; i < dataArray.length; i++) 
+		{
+			if (dataArray[i]['checkoutDate']  == today)
+			{
+				dischargeToday = dischargeToday +1;
+			}
+		 availableBeds = availableBeds +  dataArray[i]['bedCount'];
+		}
+document.getElementById("dischargeToday").innerHTML = dischargeToday;
+document.getElementById("availableBeds").innerHTML = (68-availableBeds) + '/68';
+
+//Load modal window on load
+var url = window.location.href;
+
+if ( url.split('#').length >1)
+{
+	var arguments = url.split('#')[1].split('=');
+	//arguments.shift();
+	if (arguments=='window')
+	{
+	 open_modal()
+	};
+};
+
+
+function selectElement(id, valueToSelect) {    
+    let element = document.getElementById(id);
+    element.value = valueToSelect;
+}
+//Disable Keypress
+jQuery(document).ready(function($) {
+ $('#checkoutDate').bind('keypress cut copy paste', function(e) {
+    e.preventDefault(); 
+});
+});
+jQuery(document).ready(function($) {
+ $('#roomnumber').bind('keypress cut copy paste', function(e) {
+    e.preventDefault(); 
+});
+});
+
+// Get the Sidebar
+var mySidebar = document.getElementById("mySidebar");
+
+// Get the DIV with overlay effect
+var overlayBg = document.getElementById("myOverlay");
+
+// Toggle between showing and hiding the sidebar, and add overlay effect
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+    overlayBg.style.display = "none";
+  } else {
+    mySidebar.style.display = 'block';
+    overlayBg.style.display = "block";
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+  mySidebar.style.display = "none";
+  overlayBg.style.display = "none";
+}
+
+function open_modal()
+{
+	document.getElementById('id01').style.display='block';
+	var i;
+				for (i = 0; i < dataArray.length; i++) 
+				{
+					var strBedTag =dataArray[i]['bedTag'];
+					if (strBedTag.indexOf("|") >0)
+					{
+						document.getElementById(strBedTag.split('|')[0].trim()).style.background ="red" ;
+						document.getElementById(strBedTag.split('|')[1].trim()).style.background ="red" ;	
+						$( "#"+strBedTag.split('|')[0].trim()).attr("title", dataArray[i].name);
+						$( "#"+strBedTag.split('|')[1].trim()).attr("title", dataArray[i].name);
+						
+						if(typeof strBedTag.split('|')[2] !== 'undefined' )
+						{
+							document.getElementById(strBedTag.split('|')[2].trim()).style.background ="red" ;
+							$( "#"+strBedTag.split('|')[2].trim()).attr("title", dataArray[i].name);
+						}
+					}
+					else
+					{						
+						document.getElementById(strBedTag.trim()).style.background ="red" ;						
+						$( "#"+strBedTag.split('|')[0].trim()).attr("title", dataArray[i].name);
+					}
+				}
+	document.getElementsByClassName("tablink")[0].click();
+	//xw3_close();
+}
+</script>
+
+</body>
+</html>
+
