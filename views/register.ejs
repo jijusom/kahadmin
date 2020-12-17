@@ -1,0 +1,220 @@
+<meta http-equiv="cache-control" content="no-cache" />
+<style>
+	.hidden{display:none;};
+	
+</style>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script>
+ var userArray = {};
+function open_settings()
+{
+
+ document.getElementById("formUser").reset();
+
+		var settings = {
+		  "url":  window.location.origin +"/users/getusers",
+		  "method": "GET",
+		  "dataType": "json",
+		  "timeout": 0,
+		};
+		$.ajax(settings).done(function (data) 
+		{
+			var len = data.length;
+			var txt = "";
+			var j=1;
+			if(len > 0)
+			{
+				userArray = data;
+				console.log(userArray);
+				for(var i=0;i<len;i++)
+				{
+					if(data[i].firstName && data[i].lastName&& data[i].emailaddress)
+					{
+						txt += "<tr  id=" + data[i].id + ">" ;
+						txt += "<td>"+ j + "</td>";
+						txt += "<td id='fname'>"+ data[i].firstName +"</td>";
+						txt += "<td id='lname'>"+ data[i].lastName +"</td>" ;
+						txt += "<td id='eadd'>"+ data[i].emailaddress +"</td>";
+						txt += "<td id='stat'> <a href='#'>"+ data[i].active +" </a></td>";
+						txt += "<td id='pwdreset'> <a href ='#' onclick='openform(" + data[i].id + ");' >Reset </a></td> </tr>";
+					}
+					j = j+1;
+				}
+				if(txt != ""){
+					$("#tbldtl").append(txt).removeClass("hidden");
+				}
+			}
+		});
+		document.getElementById('idTbl').style.display='none';
+		document.getElementById('idMain').innerHTML = document.getElementById('idLoginTbl').innerHTML;
+};
+
+function openform(id)
+{
+	var len = userArray.length; 
+		for(var i=0;i<len;i++)
+				{
+					if(userArray[i].id ==id)
+					{
+						$('#firstName').val(userArray[i].firstName);
+						$('#lastName').val(userArray[i].lastName);
+						$('#username').val(userArray[i].emailaddress);
+						$('#activeUser').prop('checked', false);
+						
+						
+						$("#firstName").attr("disabled", "disabled")
+						$("#firstName").css('color', 'white');
+						$("#lastName").attr("disabled", "disabled")
+						$("#lastName").css('color', 'white');
+						$("#username").attr("disabled", "disabled")
+						$("#username").css('color', 'white');
+						
+						//txt += "<td>"+ j + "</td>";
+						//txt += "<td id='fname'>"+ data[i].firstName +"</td>";
+						//txt += "<td id='lname'>"+ data[i].lastName +"</td>" ;
+						//txt += "<td id='eadd'>"+ data[i].emailaddress +"</td>";
+						//txt += "<td id='stat'>"+ data[i].active +"</td></tr>";
+					}
+					
+				}
+				document.getElementById('idAddUser').style.display='block';
+	
+};
+
+
+</script>
+<div id ="idLoginTbl" class="w3-main"style="margin-left:300px;margin-top:43px; width:75%;display:none">
+	<h5>User List</h5>
+    <table id ="tbldtl" class="w3-table  w3-bordered w3-border  w3-black">
+		<th> #</th>
+		<th>First Name</th>
+		<th> Last Name</th>
+		<th> Login ID</th>
+		<th> Active</th>
+		<th> Password</th>
+
+    </table>
+	<br>
+    <button class="w3-button w3-dark-black" onclick="document.getElementById('idAddUser').style.display='block';" >Add User <i class="fa fa-plus green"style="color:green;"></i></button>
+</div>
+<div id ="idMain" class="w3-container">
+
+</div>	
+
+<div id="idAddUser" class="modal"style="left:7%;padding-top:5%;">
+    <div class="w3-modal-content w3-card-4 w3-animate-opacity w3-black" style="max-width:550px">
+
+      <div class="w3-center"><br>
+        <span onclick="document.getElementById('idAddUser').style.display='none'" class="w3-button w3-xlarge w3-hover-red w3-display-topright" title="Close Modal">&times;</span>
+      </div>
+      <form  class="w3-container" id ="formUser">
+			<h2 class="w3-center">User Details</h2>
+					<div class="w3-row" >
+						<div class="w3-half" >
+						 <label>First Name</label>
+						  <input class="w3-input w3-border" style="width:98%" name="firstName" id="firstName"type="text" placeholder="First Name" maxlength = "50" autocomplete="off"required>
+						</div>
+						<div class="w3-half">
+						<label>Last Name</label>
+						<input class="w3-input w3-border" style="width:98%" name="lastName"  id="lastName" type="text"  placeholder="Last Name" maxlength = "50" autocomplete="off" required>
+						</div>
+					</div>
+					<div class="w3-row w3-section">
+						<div class="w3-col" style="width:60%">
+						 <label>User Name</label>
+						  <input class="w3-input w3-border" name="username" id="username"type="text" placeholder="User Name" autocomplete="off" maxlength = "50" required>
+						</div>	
+					</div>
+				<div class="w3-row w3-section">
+					<div class="w3-row" >
+						<div class="w3-half" >
+						 <label>Password</label>
+						  <input  class="w3-input w3-border" style="width:98%" name="password" id="password"type="password"
+						  placeholder="Password" maxlength = "50" minlength="6" required autocomplete="off"required>
+						</div>
+						<div class="w3-half">
+						<label>Confirm Password</label>
+						  <input  class="w3-input w3-border" style="width:98%" name="password1" id="password1"type="password" placeholder="Confirm Password" maxlength = "50"  minlength="6" autocomplete="off"required>
+						</div>
+					</div>
+				</div>
+				<div class="w3-row w3-section">
+					<div class="w3-row" >
+					<input class="w3-check" type="checkbox" checked="checked" id="activeUser">
+							<label>Active</label>
+					</div>
+				</div>					
+			 <div class="w3-container w3-border-top w3-padding-16 w3-black">
+				<button onclick="document.getElementById('idAddUser').style.display='none';" type="button" class="w3-button w3-blue">Cancel</button>
+				<button  class="w3-button w3-blue" type="submit" name="usersubmit">Save</button>
+	   			    <div  style="float:right;">
+					<label style="color:#ff9800;padding:5px;display: none"  id="usermessages" ></label>  </div>
+				</div>
+				
+      </form>
+    </div>
+  </div>
+
+
+<script>
+
+//Custom password messages
+$(function(){
+    $("input[name=password]")[0].oninvalid = function () {
+        this.setCustomValidity("Password must be at least 6 characters.");
+    };
+});
+$(function(){
+    $("input[name=password]")[0].oninput= function () {
+        this.setCustomValidity("");
+    };
+})
+$(function(){
+    $("input[name=password1]")[0].oninvalid = function () {
+        this.setCustomValidity("Password must be at least 6 characters.");
+    };
+});
+$(function(){
+    $("input[name=password1]")[0].oninput= function () {
+        this.setCustomValidity("");
+    };
+})
+//Submit Jquery
+$("#formUser").submit(function(event){
+ event.preventDefault();
+	if ($("input[name=password]")[0].value != $("input[name=password1]")[0].value)
+	{
+		$("#usermessages").show();
+		$("#usermessages").html("Password does not match");
+		return;
+	};
+
+
+ url = window.location.origin ;
+	$.ajax(
+				{
+					url: window.location.origin +'/users/register', 
+					type: 'POST', 
+					contentType: 'application/json', 
+					data: JSON.stringify({
+											"firstName": $("#firstName").val(),
+											"lastName": $("#lastName").val(),
+											"emailaddress": $("#username").val(),
+											"passcode": $("#password").val(),
+											"password2": $("#password1") .val()
+										})				
+				}
+			).done(function (response) {
+				$("#usermessages").show();
+				$("#usermessages").html(response.message);
+				if(response.success=='true')
+				{
+					 //document.getElementById('idAddUser').style.display='none'
+					 open_settings();
+				};
+			})
+			.fail( function(xhr, textStatus, errorThrown) {
+			alert(xhr.responseText);
+			});
+	});
+</script>

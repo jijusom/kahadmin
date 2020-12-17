@@ -1,0 +1,280 @@
+<!-- !Bed Change Modal! -->
+<div id="id03" style="left:7%;padding-top:8%;display:none">
+    <div  style="max-width:750px">
+
+
+      <form  class="w3-container"   id ="updateBedRoom">
+		
+				<div class="w3-row w3-section">
+					<div class="w3-col" style="width:60%">
+					 <label>Hosptial ID</label>
+					  <input class="w3-input w3-border" name="hospitalID" id="hospitalID1"type="text" placeholder="Hosptial ID" autocomplete="off" required>
+					</div>
+					<div class="w3-col" style="width:40%;padding-top:4%">
+						<button type="button" style="font-size:24px" onclick = "populateData()">    <i class="fa fa-search"></i></button>
+					</div>
+				</div>
+					<div class="w3-row" >
+						<div class="w3-col" style="width:40%"  >
+						 <label>Full Name</label>
+						  <input readOnly class="w3-input w3-border" style="width:99%" name="name1" id="name1"type="text"   autocomplete="off">
+						</div>
+						<div class="w3-col"  style="width:20%">
+						 <label>Room Number</label>
+						  <input readOnly class="w3-input w3-border" style="width:98%" name="roomNumber1" id="roomNumber1"type="text"  autocomplete="off">
+						</div>
+						<div class="w3-col" style="width:20%">
+						<label>Bed </label>
+						  <input readOnly class="w3-input w3-border" style="width:98%"  name="roomNumber1" id="bedNumber1"type="text"  autocomplete="off">
+						</div>
+						<div class="w3-col" style="width:20%">
+					<label>Discharge Date</label>
+					  <input readOnly class="w3-input w3-border" style="width:98%"name="checkoutDate" id="checkoutDate1" type="text"autocomplete="off">
+					</div>
+					</div>
+	
+			
+					<div class="w3-row w3-section">
+					<div class="w3-row" >
+						<div class="w3-quarter" >
+						 <label>Floor</label>
+						<select class="w3-select" style="width:98%"name="option" name="floor"  id="floor" onChange="populateRooms(this.value);"required>
+						  <option value="0" disabled selected>Select a floor</option>
+						  <option value="1" >Ground Floor</option>
+						  <option value="2" > First Floor</option>
+						  <option value="3" >Second Floor</option>
+						</select>
+						</div>
+						<div class="w3-quarter">
+						<label>Room</label>
+						<select class="w3-select" style="width:98%"name="option" name="newroomNumber"  id="newroomNumber" onChange="populateBeds(this.value);" required>
+						  <option value="" disabled selected>Select a Room</option>
+						</select>
+						</div>
+						<div class="w3-quarter">
+						<label>Bed</label>
+						<select class="w3-select" style="width:98%" name="option" name="newbedNumber"  id="newbedNumber" required>
+						  <option value="" disabled selected>Select a Bed</option>
+						</select>
+						</div>
+					</div>
+				</div>
+				
+				 <div class="w3-container w3-border-top w3-padding-16 w3-black">
+					<button onclick="document.getElementById('id03').style.display='none';" type="button" class="w3-button w3-blue">Cancel</button>
+					<button  class="w3-button w3-blue" type="submit" name="submit">Save</button>
+	   			    <div  style="float:right;">
+					<label style="color:#ff9800;padding:5px;display: none"  id="messagesupdate" ></label>  </div>
+				</div>
+				<input type="hidden"  id="phoneNumber1"> </input>
+      </form>
+    </div>
+  </div>
+ <script>
+ 
+//***************************************************BED CHANGE****************************************************;
+function populateData()
+{
+	hospitalId= document.getElementById("hospitalID1").value;
+	for (i = 0; i < dataArray.length; i++) 
+		{
+			if (dataArray[i]['hospitalID']  == hospitalId)
+			{
+				document.getElementById("name1").value = dataArray[i]['name'].trim();
+				document.getElementById("roomNumber1").value = dataArray[i]['roomNumber'] ;
+				document.getElementById("bedNumber1").value = dataArray[i]['bedNumber'] ;
+				document.getElementById("checkoutDate1").value = dataArray[i]['checkoutDate'] ;
+				document.getElementById("phoneNumber1").value = dataArray[i]['phoneNumber'] ;
+				
+				
+			}
+		}
+}
+function populateRooms(value)
+{
+	var bookedBed =[]; 
+	var items = document.getElementsByClassName("fill-div");
+	var option = [' Select a Room'];
+	 $('#newbedNumber').empty();
+	$('<option/>').val(' Select a Bed').html(' Select a Bed').appendTo('#newbedNumber');
+	var uniqueNames = [];
+	for (i = 0; i < dataArray.length; i++) 
+		{
+			bookedBed.push(dataArray[i]['roomNumber'].trim() + "|" + dataArray[i]['bedNumber'].trim()+ "|" + dataArray[i]['bedTag'].trim());
+		}
+	 $('#newroomNumber').empty();
+	  for (var i = 0; i < items.length; i++)
+	  {
+		bedName = $(items[i], this).attr('data');		 
+		 for( var j=0;j < bookedBed.length; j++)
+		 {
+			if (bookedBed[j].split("|")[0] == bedName.split("|")[0])
+			{
+				//if (bookedBed[j].split("|")[1] =='Room')
+				//{
+				//	bedName ="";
+				//}
+				//else 
+				if((bookedBed[j].split("|")[1] ==bedName.split("|")[1]))
+				{
+					bedName ="";
+				}
+			}
+		 }
+		if (value ==1)
+		{	
+			if (bedName.indexOf("GF")==0)
+			{
+				 option.push(bedName.split('|')[0],bedName.split('|')[0]);
+			}
+		}
+		if (value ==2)
+		{	
+			if (bedName.indexOf("FF")==0)
+			{
+				 option.push(bedName.split('|')[0],bedName.split('|')[0]);
+			}
+		}
+		if (value ==3)
+		{	
+			if (bedName.indexOf("SF")==0)
+			{
+				 option.push(bedName.split('|')[0],bedName.split('|')[0]);
+			}
+		}
+	  }
+	 
+	  $.each(option.sort(), function(i, el){
+			if($.inArray(el, uniqueNames) === -1) 
+			{
+				uniqueNames.push(el);	
+				$('<option/>').val(el).html(el).appendTo('#newroomNumber');
+			}
+		});
+}
+function populateBeds(value)
+{
+	var bookedBed =[]; 
+	var items = document.getElementsByClassName("fill-div");
+	var option = [];
+	var uniqueNames = [];
+	var flag= false;
+	
+	for (i = 0; i < dataArray.length; i++) 
+		{
+			bookedBed.push(dataArray[i]['roomNumber'].trim() + "|" + dataArray[i]['bedNumber'].trim()+ "|" + dataArray[i]['bedTag'].trim());
+		}
+	
+	 $('#newbedNumber').empty();
+	  for (var i = 0; i < items.length; i++)
+	  {
+		bedName = $(items[i], this).attr('data');
+		
+		for( var j=0;j < bookedBed.length; j++)
+		 {
+			if (bookedBed[j].split("|")[0] == value)
+			{
+				//if (bookedBed[j].split("|")[1] =='Room')
+				//{
+				//	bedName ="";
+				//	flag= true;
+				//}
+				//else 
+				if((bookedBed[j].split("|")[1] ==bedName.split("|")[1]))
+				{
+					//bedName ="";
+					//flag= true;
+				}
+			}
+		 }
+		if (bedName.split("|")[0] == value)
+			{
+				
+				if (bedName.split('|').length==4 & flag==false)
+				{
+					option.push([bedName.split('|')[2]+ '|' + bedName.split('|')[3],'Room']);
+					flag= true;
+				}
+				if (bedName.split('|').length==5 & flag==false)
+				{
+					option.push([bedName.split('|')[2]+ '|' + bedName.split('|')[3]+'|' + bedName.split('|')[4],'Room']);
+					flag= true;
+				}
+				
+				 option.push([bedName.split('|')[2],bedName.split('|')[1]]);		 
+			}
+	  }
+		option.sort(function(a, b) {
+			if (a[1] === b[1]) 
+					{
+						return 0;
+					}
+					else 
+					{
+						return (a[1] < b[1]) ? -1 : 1;
+					}
+		});
+		
+		$.each(option, function(key, values) {
+						value =values[1];
+						key  = values[0];
+						$('#newbedNumber').append($('<option>', { value : key }).text(value))
+					});		
+//Submit Jquery
+
+$("#updateBedRoom").submit(function(event){
+ event.preventDefault();
+ var e = document.getElementById("newbedNumber");
+ var strbedNumber = e.options[e.selectedIndex].text;
+ var bedCount = 1;
+ bedCount =$('#newbedNumber').val().split("|").length;
+ var date = $("#checkoutDate1") .val();
+ date = date.split("/")[1] + '/' + date.split("/")[0]  + '/' + date.split("/")[2] ;
+url = window.location.origin ;
+	$.ajax(
+				{
+					url: window.location.origin +'/home/updatedata', 
+					type: 'POST', 
+					contentType: 'application/json', 
+					data: JSON.stringify({
+											"hospitalID": $("#hospitalID1") .val(),
+											"name": $("#name1") .val(),
+											"phoneNumber": $("#phoneNumber1") .val(),
+											"checkoutDate": date,
+											"roomNumber": $("#roomNumber1") .val(),
+											"bedNumber": $("#bedNumber1") .val(),
+											"bedTag": $('#newbedNumber').val(),
+											"bedCount":bedCount,
+											"newroomNumber": $("#newroomNumber") .val(),
+											"newbedNumber": strbedNumber
+										})				
+				}
+			).done(function (response) {
+				
+				$("#messagesupdate").show();
+				$("#messagesupdate").html(response.message);
+				if(response.message='true')
+				{
+					 //location.reload(true); 
+					 //window.location.search += "?openmodal=1"
+					   console.log(url+= "?openmodal=1");
+					   location.replace(url+= "/home#window");
+				};
+			})
+			.fail( function(xhr, textStatus, errorThrown) {
+			alert(xhr.responseText);
+			});
+ 
+	});
+}
+
+
+function open_bedChange()
+{
+		document.getElementById('idMain').style.display='block';
+		 document.getElementById('idTbl').style.display='none';
+		 document.getElementById('idMain').innerHTML = document.getElementById('id03').innerHTML;
+}
+ </script>
+ 
+ 

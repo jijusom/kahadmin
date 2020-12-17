@@ -1,0 +1,53 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<%- include ("./partials/header") %>
+
+</head>
+<script>
+$("#userform").submit(function(e) {
+    e.preventDefault();
+});
+</script>
+
+<body>
+	<section class="w3l-form-36">
+		<div class="form-36-mian section-gap">
+			<div class="wrapper">
+				<div class="form-inner-cont">
+					<h3>Login now</h3>
+					<form  action="/users/login"class="signin-form" method="post" id="userform">
+						<div class="form-input">
+							<span class="fa fa-envelope-o" aria-hidden="true"></span> <input type="email" required  name="email"
+								placeholder="Username"  value= "<%= typeof email != "undefined" ? email : "" %>"
+								 />
+						</div>
+						<div class="form-input">
+							<span class="fa fa-key" aria-hidden="true"></span> <input type="password" name="password" required placeholder="Password" />
+						</div>
+						<%- include ("./partials/messages") %>
+						<div style="left:68%">
+							<br>
+							<button class="btn theme-button" type="submit"> Login</button>
+						</div>
+					</form>	
+				
+				</div>
+
+				<!-- copyright -->
+					<div style ="font-size:1px;" >
+					<p>© 2020 Active Login Form. All rights reserved | Design by <a href="http://w3layouts.com/"
+							target="_blank">W3Layouts</a></p>
+				</div>
+				<!-- //copyright -->
+			</div>
+		</div>
+	</section>
+</body>
+</html>

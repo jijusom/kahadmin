@@ -1,0 +1,831 @@
+div {
+    position: relative;
+	
+}
+body, html {
+  height: 85%;
+  margin: 0;
+  
+}
+a.fill-div {
+    display: block;
+    height: 100%;
+    width: 100%;
+	 color: #FFFFFF; 
+    text-decoration: none;
+}
+.landingpage.frontviewpic
+{
+	padding-top: 45px;
+	max-width:100%;
+	height:auto; 
+	width:100%
+
+}
+.landingpage.groundfloor
+{
+	position: absolute;
+	display: inline:block;
+    width: 100%;
+    height: 20%;
+    left: 8%;
+    top: 65%;
+	max-width:87%;
+}
+.landingpage.groundfloor:hover
+{
+	border-style: solid;
+	border-color: black;
+}
+.landingpage.firstfloor
+{
+	position: absolute;
+	display: inline:block;
+    width: 100%;
+    height: 20%;
+    left: 8%;
+    top: 40%;
+	max-width:87%;
+}
+.landingpage.firstfloor:hover
+{
+	border-style: solid;
+	border-color: coral;
+}
+.landingpage.secondfloor
+{
+	position: absolute;
+	display: inline:block;
+    width: 100%;
+     height: 20%;
+    left: 8%;
+    top: 20%;
+	max-width:9%;
+}
+.landingpage.secondfloor:hover
+{
+	border-style: solid;
+	border-color: coral;
+	
+}
+groundfloor{  
+	
+}
+.groundfloor {
+	
+  color: white;
+  font-size: 0.8vw;
+  text-align: center;
+  vertical-align: middle;	
+  display: block;
+  
+}
+.groundfloor.floorplan {
+	
+	padding-top:1%;
+	max-width:99%;
+	display: block;
+
+}
+.groundfloor.room1 {
+	position: absolute;
+	display: block;
+    width: 2.8%;
+    height: 5.7%;
+    left: 6%;
+    top: 53.9%;
+	max-width:87%;
+    background-color: green;
+	opacity: 0.5;
+}
+.groundfloor.room2 {
+	position: absolute;
+	display: block;
+	width: 2.8%;
+    height: 5.7%;
+    left: 15%;
+    top: 53.9%;
+    background-color: green;
+	opacity: 0.5;
+}
+
+.groundfloor.room3 {
+	position: absolute;
+	display: block;
+	width: 2.8%;
+    height: 5.7%;
+    left: 6%;
+    top: 33.8%;
+    background-color: green;
+	opacity: 0.5;
+}
+.groundfloor.room4 {
+	position: absolute;
+	display: block;
+	width: 2.8%;
+    height: 5.7%;
+    left: 15%;
+    top: 33.8%;
+    background-color: green;
+	opacity: 0.5;
+}
+.groundfloor.room5 {
+	position: absolute;
+	display: block;
+	width: 2.8%;
+    height: 5.8%;
+    left: 6%;
+    top: 20.4%;
+    background-color: green;
+	opacity: 0.5;
+}
+.groundfloor.room6 {
+	position: absolute;
+	display: block;
+	width: 2.8%;
+    height: 5.8%;
+    left: 15%;
+    top: 20.4%;
+    background-color: green;
+	opacity: 0.5;
+}
+.groundfloor.room7 {
+	position: absolute;
+	display: block;
+	width: 2.8%;
+    height: 5.8%;
+    left: 71.7%;
+   top: 20.6%;
+    background-color: green;
+	opacity: 0.5;
+}
+.groundfloor.room8 {
+	position: absolute;
+	display: block;
+	width: 2.8%;
+    height: 6%;
+    left: 80.6%;
+    top: 20.4%;
+    background-color: green;
+	opacity: 0.5;
+}
+.groundfloor.room9{
+	position: absolute;
+	display: block;
+	width: 2.8%;
+	height: 5.8%;
+    left: 71.7%;
+    top: 34%;
+    background-color: green;
+	opacity: 0.5;
+}
+.groundfloor.room10 {
+	position: absolute;
+	display: block;
+	width: 2.8%;
+	height: 6%;
+	left: 80.6%;
+    top: 33.8%;
+    background-color: green;
+	opacity: 0.5;
+}
+.groundfloor.room11{
+	position: absolute;
+	display: block;
+	width: 2.8%;
+	height: 6%;
+    left: 71.7%;
+    top: 53.9%;
+    background-color: green;
+	opacity: 0.5;
+}
+.groundfloor.room12 {
+	position: absolute;
+	display: block;
+	width: 2.8%;
+	height: 6%;
+    left: 80.6%;
+	top: 53.9%;
+    background-color: green;
+	opacity: 0.5;
+}
+
+otherfloor{  
+	
+}
+.otherfloor {
+	
+  color: white;
+  font-size: 0.8vw;
+  text-align: center;
+  vertical-align: middle;	
+  display: block;
+  
+}
+.otherfloor.floorplan {
+	
+	padding-top:1%;
+	max-width:100%;
+	height:auto; 
+	width:100%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+.otherfloor.room1 {
+	position:absolute;
+	width: 2.8%;
+    height: 5.5%;
+    left: 6.4%;
+    top: 66.5%;
+    background-color: green;
+	opacity: 0.5;
+}
+.otherfloor.room2 {
+	position:absolute;
+	width: 2.8%;
+    height: 5.7%;
+    left: 15.6%;
+    top: 66.5%;
+    background-color: green;
+	opacity: 0.5;
+}
+
+.otherfloor.room3 {
+	position:absolute;
+	width: 2.8%;
+    height: 5.2%;
+    left: 6.4%;
+    top: 53.3%;
+    background-color: green;
+	opacity: 0.5;
+}
+.otherfloor.room4 {
+	position:absolute;
+	width: 2.8%;
+    height: 5.7%;
+    left: 15.6%;
+    top: 53.3%;
+    background-color: green;
+	opacity: 0.5;
+}
+.otherfloor.room5 {
+	position:absolute;
+	width: 2.8%;
+    height: 5.5%;
+    left: 6.4%;
+    top: 32.7%;
+    background-color: green;
+	opacity: 0.5;
+}
+.otherfloor.room6 {
+	position:absolute;
+	width: 2.8%;
+    height: 5.7%;
+	left: 15.6%;
+    top: 32.7%;
+    background-color: green;
+	opacity: 0.5;
+}
+.otherfloor.room7 {
+	position:absolute;
+	width: 2.8%;
+    height: 5.3%;
+    left: 6.4%;
+    top: 20.1%;
+    background-color: green;
+	opacity: 0.5;
+}
+.otherfloor.room8 {
+	position:absolute;
+	width: 2.8%;
+    height: 5.3%;
+    left: 15.6%;
+    top: 20.1%;
+    background-color: green;
+	opacity: 0.5;
+}
+.otherfloor.room9{
+	position:absolute;
+	width: 2.8%;
+	height: 5.1%;
+    left: 71.8%;
+	top: 20%;
+    background-color: green;
+	opacity: 0.5;
+}
+.otherfloor.room10 {
+	position:absolute;
+	width: 2.8%;
+    height: 5.1%;
+	left: 80.6%;
+    top: 20%;
+    background-color: green;
+	opacity: 0.5;
+}
+.otherfloor.room11{
+	position:absolute;
+	width: 2.8%;
+	height: 5.1%;
+    left: 71.8%;
+    top:  33%;
+    background-color: green;
+	opacity: 0.5;
+}
+.otherfloor.room12 {
+	position:absolute;
+	width: 2.8%;
+    height: 5.1%;
+	left: 80.6%;
+    top:  33%;
+    background-color: green;
+	opacity: 0.5;
+
+}
+.otherfloor.room13{
+	position:absolute;
+	width: 2.8%;
+	height: 5.1%;
+    left: 71.8%;
+    top: 53.4%;
+    background-color: green;
+	opacity: 0.5;
+}
+.otherfloor.room14 {
+	position:absolute;
+	width: 2.8%;
+    height: 5.1%;
+	left: 80.6%;
+    top: 53.4%;
+    background-color: green;
+	opacity: 0.5;
+}
+.otherfloor.room15{
+	position:absolute;
+    width: 5.2%;
+    height: 2.4%;
+    left: 78.3%;
+    top: 64.1%;
+    background-color: green;
+	opacity: 0.5;
+}
+.otherfloor.room16 {
+	position:absolute;
+    width: 5.2%;
+    height: 2.4%;
+    left:78.3%;
+    top: 69.2%;
+    background-color: green;
+	opacity: 0.5;
+}
+.otherfloor.room17{
+	position:absolute;
+	width: 5.2%;
+    height: 2.4%;
+    left: 52.3%;
+    top: 77%;
+    background-color: green;
+	opacity: 0.5;
+}
+.otherfloor.room18 {
+	position:absolute;
+	width: 5.2%;
+	height: 2.4%;
+	left: 52.3%;
+    top: 71.5%;
+    background-color: green;
+	opacity: 0.5;
+}
+.otherfloor.room19{
+	position:absolute;
+	width: 2.8%;
+	height: 5.1%;
+	left: 62.6%;
+    top: 67.3%;
+    background-color: green;
+	opacity: 0.5;
+}
+.otherfloor.room20 {
+	position:absolute;
+	width: 2.8%;
+	height: 5.1%;
+	left: 62.4%;
+    top: 61.3%;
+    background-color: green;
+	opacity: 0.5;
+}
+.otherfloor.room21{
+	position:absolute;
+	width: 5.2%;
+	height: 2.4%;
+	left: 52.3%;
+    top: 59.5%;
+    background-color: green;
+	opacity: 0.5;
+}
+.otherfloor.room22 {
+	position:absolute;
+	width: 5.2%;
+	height: 2.4%;
+	left: 52.3%;
+    top: 53.7%;
+    background-color: green;
+	opacity: 0.5;
+}
+.otherfloor.room23{
+	position:absolute;
+	width: 5.2%;
+	height: 2.4%;
+    left: 32.7%;
+    top: 53.7%;
+    background-color: green;
+	opacity: 0.5;
+}
+.otherfloor.room24 {
+	position:absolute;
+	width: 5.2%;
+	height: 2.4%;
+    left: 32.7%;
+    top: 59.5%;
+    background-color: green;
+	opacity: 0.5;
+}
+.otherfloor.room25{
+	position:absolute;
+	width: 2.8%;
+	height: 5.1%;
+	left: 24.6%;
+    top: 61.1%;
+    background-color: green;
+	opacity: 0.5;
+}
+.otherfloor.room26 {
+	position:absolute;
+	width: 2.8%;
+	height: 5.1%;
+    left: 24.6%;
+    top: 67.3%;
+    background-color: green;
+	opacity: 0.5;
+}
+.otherfloor.room27 {
+	position:absolute;
+	width: 5.2%;
+	height: 2.4%;
+	left: 32.7%;
+    top: 71.5%;
+    background-color: green;
+	opacity: 0.5;
+}
+
+.otherfloor.room28 {
+	position:absolute;
+	width: 5.2%;
+	height: 2.4%;
+	left: 32.7%;
+    top: 77.4%;
+    background-color: green;
+	opacity: 0.5;
+}
+
+
+  /*--
+Author: W3layouts
+Author URL: http://w3layouts.com
+--*/
+  :root {
+      --theme-color: #1F2323;
+      --title-color: #051b35;
+      --text-color: #333333;
+  }
+
+  /* reset code */
+  html {
+      scroll-behavior: smooth;
+  }
+
+  body,
+  html {
+      margin: 0;
+      padding: 0;
+      color: #585858;
+  }
+
+  * {
+      box-sizing: border-box;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  }
+
+  .wrapper {
+      width: 100%;
+      padding-right: 15px;
+      padding-left: 15px;
+      margin-right: auto;
+      margin-left: auto;
+  }
+
+  @media (min-width: 576px) {
+      .wrapper {
+          max-width: 540px;
+      }
+  }
+
+  @media (min-width: 768px) {
+      .wrapper {
+          max-width: 720px;
+      }
+  }
+
+  @media (min-width: 992px) {
+      .wrapper {
+          max-width: 960px;
+      }
+  }
+
+  @media (min-width: 1200px) {
+      .wrapper {
+          max-width: 1140px;
+      }
+  }
+
+  .d-grid {
+      display: grid;
+  }
+
+  .d-flex {
+      display: flex;
+      display: -webkit-flex;
+      flex-wrap: wrap;
+  }
+
+  .text-center {
+      text-align: center;
+  }
+
+  .text-left {
+      text-align: left;
+  }
+
+  .text-right {
+      text-align: right;
+  }
+
+  button,
+  select {
+      -webkit-appearance: none;
+      outline: none;
+  }
+
+  button,
+  .btn,
+  select {
+      cursor: pointer;
+  }
+
+  a {
+      text-decoration: none;
+  }
+
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  ul,
+  ol {
+      margin: 0;
+      padding: 0;
+  }
+
+  .theme-button {
+      min-width: 130px;
+      cursor: pointer;
+      text-decoration: none;
+      -webkit-appearance: none;
+      display: inline-block;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 15px;
+      text-align: center;
+      color: #fff;
+      background: var(--theme-color);
+      padding: 14px 18px;
+      border-radius: 4px;
+      transition: 0.3s ease;
+      border: 1px solid var(--theme-color);
+  }
+
+  .theme-button:hover {
+      background: #ffffff;
+      color: #000000;
+  }
+
+  .form-36-mian {
+     background-size: cover;
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.85), rgba(255, 255, 255, 0)), url(/images/home.jpg);
+	  background-repeat: no-repeat;
+      background-position: center;
+      background-attachment: fixed;
+      min-height: 100vh;
+      display: grid;
+      align-items: center;
+      padding: 2rem 0;
+	  min-width: 100vh;
+  }
+
+  .form-inner-cont {
+      max-width: 370px;
+      margin-right: auto;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 4px;
+  }
+
+  .form-inner-cont h3 {
+      font-size: 25px;
+      line-height: 30px;
+      color: var(--title-color);
+  }
+
+  .form-input span.fa {
+      color: var(--title-color);
+      font-size: 14px;
+      border-right: 1px solid #eee;
+      margin-right: 5px;
+  }
+
+  .form-input input[type="text"],
+  .form-input input[type="email"],
+  .form-input input[type="password"] {
+      background: transparent;
+      border: none;
+      outline: none;
+      width: 100%;
+      font-size: 16px;
+      padding: 0px 12px 0px 0px;
+      color: var(--title-color);
+      height: 45px;
+      -webkit-appearance: none;
+  }
+
+  .form-input {
+      margin-top: 20px;
+      background: rgba(31, 35, 35, 0.03);
+      display: grid;
+      grid-template-columns: .1fr 1fr;
+      align-items: center;
+      padding-left: 15px;
+      border: 1px solid rgba(31, 94, 180, 0.22);
+      border-radius: 4px;
+  }
+
+  .login-remember {
+      grid-template-columns: auto auto;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 2rem;
+  }
+
+  
+
+  p.remember {
+      font-size: 13px;
+      line-height: 18px;
+      color: var(--text-color);
+  }
+
+  .new-signup a {
+      font-size: 14px;
+      margin-top: 25px;
+      display: block;
+      color: #ff0000;
+      text-decoration: underline;
+  }
+
+  .social-icons {
+      align-items: center;
+      border-top: 1px solid #eee;
+      border-bottom: 1px solid #eee;
+      padding: 30px 0px 20px;
+      margin-top: 40px;
+      position: relative;
+  }
+
+  .continue {
+      text-align: center;
+      display: inline-block;
+      width: 14%;
+      position: absolute;
+      top: -20px;
+      left: 43%;
+  }
+
+  .continue span {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 13px;
+      background: #f7f7f7;
+      color: var(--title-color);
+      text-align: center;
+      display: inline-block;
+      width: 40px;
+      border-radius: 50%;
+      height: 40px;
+      line-height: 40px;
+  }
+
+  button.btn {
+      line-height: 40px;
+      padding: 0;
+      min-width: 100px;
+  }
+
+  .facebook,
+  .google {
+      font-weight: bold;
+      display: block;
+      width: 35px;
+      height: 35px;
+      line-height: 35px;
+      text-align: center;
+      margin: 0 10px;
+      border-radius: 50%;
+  }
+
+  .facebook span,
+  .google span {
+      display: block;
+      line-height: 35px;
+      color: #fff;
+      font-size: 14px;
+  }
+
+  .facebook {
+      background: #3b5998;
+  }
+
+  .google {
+      background: #dd4b39;
+  }
+
+  .facebook:hover,
+  .google:hover {
+      opacity: 0.9;
+  }
+
+  p.signup {
+      color: var(--text-color);
+      font-size: 15px;
+      line-height: 25px;
+      display: block;
+      margin-top: 20px;
+  }
+
+  p.signup a {
+      font-weight: bold;
+      color: var(--theme-color);
+  }
+
+  p.signup a:hover {
+      text-decoration: underline;
+  }
+
+  .social-login {
+      display: flex;
+      justify-content: center;
+  }
+
+  
+  .copy-right {
+      margin-top: 25px;
+  }
+
+  .copy-right p {
+      color: #fff;
+      font-size: 14px;
+      line-height: 22px;
+  }
+
+  .copy-right p a {
+      color: #fff;
+      font-size: 16px;
+      text-decoration: underline;
+  }
+
+  .copy-right p a:hover {
+      text-decoration: none;
+  }
+
+  /*--responsive--*/
+
+  @media(max-width:414px) {
+      .social-icons {
+          margin-top: 30px;
+      }
+  }
+
+  /*--//responsive--*/
+ 
